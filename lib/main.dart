@@ -59,8 +59,12 @@ class _HomePageState extends State<HomePage> {
                 children: <Widget>[
                   new Card(
                     child: new Container(
-                      child: new Text(data[index]['cat_name']),
-                      padding: const EdgeInsets.all(20.0),
+                      child: new Column(
+                        children: <Widget>[
+                          new Image.network("https://www.nikdemo.com/wallpaper/"+data[index]['cat_photo']),
+                          new Text(data[index]['cat_name']),
+                        ],
+                      ),
                     ),
                   ),
                 ],
